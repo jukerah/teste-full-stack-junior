@@ -1,6 +1,7 @@
 import { Router, Request, Response } from 'express';
 
 import { CreateProductController } from '../controllers/product/CreateProductController';
+import { ProductListController } from '../controllers/product/ProductListController';
 
 const router = Router();
 
@@ -9,7 +10,7 @@ router.get('/teste', (req: Request, res: Response) => {
 });
 
 router.post('/product', new CreateProductController().handle);
-// router.get('/product', new ListProductController().handle);
+router.get('/product', new ProductListController().handle);
 // router.get('/product/detail', new ProductDetailController().handle);
 // router.put('/product', new UpdateProductController().handle);
 // router.delete('/product', new RemoveProductController().handle);
