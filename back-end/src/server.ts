@@ -1,10 +1,12 @@
 import express, { Request, Response, NextFunction } from 'express';
 import 'express-async-errors';
 import cors from 'cors';
+import * as dotenv from "dotenv";
+dotenv.config();
 
 import { router } from './routes/routes';
 
-const port = 3333;
+const port = process.env.PORT || 3000;
 
 const app = express();
 app.use(express.json());
