@@ -6,7 +6,7 @@
   "author": "Mario Elvio <juka_mebaj@hotmail.com>",
   "license": "MIT",
   "scripts": {
-    "start": "nodemon ./build/src/server.js",
+    "start": "nodemon ./build/server.js",
     "dev": "ts-node-dev --transpile-only src/server.ts",
     "build": "tsc"
   },
