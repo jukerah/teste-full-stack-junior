@@ -9,6 +9,14 @@ class FindProductByIdService {
     if (!id) {
       throw new Error("Product ID is required!");
     }
+
+    const noDataFound = await prismaClient.product.findUnique({
+      where: {
+        id: id
+      }
+    });
+    
+    if (!noDataFound) throw new Error("No data found!");
     
     const findProductById = await prismaClient.product.findUnique({
       where: {
