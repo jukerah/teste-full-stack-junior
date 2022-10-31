@@ -83,7 +83,7 @@ Link: <a align="left" href="https://teste-full-stack-junior-front-end-deploy.ver
 ### Back-end:
 > O deploy do back-end foi realizado na Heroku.
 
-### Link: <a align="left" href="https://teste-full-stack-junior.herokuapp.com/product" target="_blank">https://teste-full-stack-junior.herokuapp.com/</a>
+### Link: <a align="left" href="https://teste-full-stack-junior.herokuapp.com/product" target="_blank">https://teste-full-stack-junior.herokuapp.com/product</a>
 
 <br />
 
