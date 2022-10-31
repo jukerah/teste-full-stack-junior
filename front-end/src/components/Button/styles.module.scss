@@ -1,0 +1,31 @@
+.button {
+  width: 100%;
+  height: 56px;
+
+  border-radius: 4px;
+
+  &[disabled] {
+    background-color: var(--dark-600) !important;
+
+    .buttonText {
+      color: var(--gray-600) !important;
+    }
+
+    cursor: not-allowed;
+  }
+
+  &:not([disabled]) {
+    &:hover {
+      filter: brightness(1.2);
+    }
+  }
+}
+
+.buttonText {
+  font-size: 1.375rem;
+  font-weight: bold;
+
+  @media (min-width: 600px) {
+    font-size: 1.6rem;
+  }
+}

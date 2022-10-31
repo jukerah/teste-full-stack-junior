@@ -6,10 +6,6 @@ interface ProductRequest {
 
 class RemoveProductService {
   async execute({ id }: ProductRequest) {
-    if (!id) {
-      throw new Error("Product ID is required!");
-    }
-
     const noDataFound = await prismaClient.product.findUnique({
       where: {
         id: id

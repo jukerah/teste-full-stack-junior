@@ -8,11 +8,7 @@ interface ProductRequest {
 }
 
 class CreateProductService {
-  async execute({ name, price, amount, description }: ProductRequest) {    
-    if (!name || !price || !amount || !description) {
-      throw new Error("All fields is required!");
-    }
-
+  async execute({ name, price, amount, description }: ProductRequest) {
     const product = await prismaClient.product.create({
       data: {
         name: name,

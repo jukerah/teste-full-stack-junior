@@ -1,0 +1,34 @@
+.container {
+  h1 {
+    color: var(--yellow-900);
+    text-align: center;
+    
+    margin-bottom: 32px;
+  }
+}
+
+.containerHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-bottom: 24px;
+
+  button {
+    background: transparent;
+  }
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+
+  width: 100%;
+
+  gap: 24px;
+
+  .containerButton {
+    display: flex;
+    gap: 24px
+  }
+}

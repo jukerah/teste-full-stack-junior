@@ -7,9 +7,6 @@ exports.UpdateProductService = void 0;
 const prisma_1 = __importDefault(require("../../prisma"));
 class UpdateProductService {
     async execute({ id, name, price, amount, description }) {
-        if (!name || !price || !amount || !description) {
-            throw new Error("All fields is required!");
-        }
         const noDataFound = await prisma_1.default.product.findUnique({
             where: {
                 id: id

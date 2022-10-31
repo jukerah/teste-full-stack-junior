@@ -1,0 +1,150 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  width: 100%;
+
+  padding: 24px;
+
+  @media (min-width: 1024px) {
+    padding: 32px;
+  }
+}
+
+.containerCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  width: 100%;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+
+  width: 100%;
+  max-width: 800px;
+
+  gap: 24px;
+
+  h1 {
+    color: var(--yellow-900);
+    font-size: 2rem;
+  }
+
+  button {
+    max-width: 250px;
+  }
+
+  @media (min-width: 768px) {
+    justify-content: space-between;
+
+    h1 {
+      font-size: 2.5rem;
+    }
+  }
+}
+
+.cards {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(1, 1fr);
+
+  width: 100%;
+
+  gap: 16px;
+  margin-top: 24px;
+
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (min-width: 1024px) {
+    gap: 24px;
+    margin-top: 32px;
+  }
+
+  @media (min-width: 1366px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @media (min-width: 1920px) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.card {
+  background-color: var(--dark-400);
+
+  display: flex;
+  flex-direction: column;
+  
+  padding: 16px;
+  border-radius: 6px;
+
+  p {
+    color: var(--white);
+
+    span {
+      color: var(--yellow-900);
+      font-weight: bold;
+    }
+  }
+}
+
+.cardHeader {
+  h2 {
+    color: var(--yellow-900);
+    text-align: center;
+    margin-bottom: 16px;
+  }
+
+  p {
+    color: var(--white);
+    margin-top: 8px;
+
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+
+  @media (min-width: 1024px) {
+    h2 {
+      font-size: 2rem;
+    }
+    
+    p {
+      font-size: 1.25rem;
+    }
+  }
+}
+
+.cardAction {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-top: 8px;
+
+  p {
+    font-size: 1.375rem;
+    color: var(--green-900);
+    font-weight: bold;
+  }
+
+  button {
+    padding: 8px;
+    margin-left: 8px;
+  }
+
+  @media (min-width: 1024px) {
+    p {
+      font-size: 1.75rem;
+    }
+  }
+}

@@ -1,0 +1,15 @@
+.container {
+  p {
+    color: var(--yellow-900);
+
+    font-size: 1.375rem;
+    text-align: center;
+
+    margin-bottom: 32px;
+  }
+}
+
+.containerButton {
+  display: flex;
+  gap: 24px
+}

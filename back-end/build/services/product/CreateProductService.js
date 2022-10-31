@@ -7,9 +7,6 @@ exports.CreateProductService = void 0;
 const prisma_1 = __importDefault(require("../../prisma"));
 class CreateProductService {
     async execute({ name, price, amount, description }) {
-        if (!name || !price || !amount || !description) {
-            throw new Error("All fields is required!");
-        }
         const product = await prisma_1.default.product.create({
             data: {
                 name: name,

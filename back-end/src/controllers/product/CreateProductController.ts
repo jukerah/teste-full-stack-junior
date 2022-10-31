@@ -7,15 +7,16 @@ class CreateProductController {
   const createProductService = new CreateProductService();
 
   if (!name) throw new Error("Name is required!");
-  if (!price) throw new Error("Price is required!");
-  if (!amount) throw new Error("Amount id is required!");
   if (!description) throw new Error("Description is required!");
 
+  const priceProduct: number = !price ? 0 : price;
+  const amountProduct: number = !amount ? 0 : amount;
+
   const product = await createProductService.execute({
-    name,
-    price,
-    amount,
-    description
+    name: name,
+    price: priceProduct,
+    amount: amountProduct,
+    description: description
   });
 
   return res.json(product);

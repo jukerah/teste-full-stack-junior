@@ -8,12 +8,18 @@ class UpdateProductController {
 
     const updateProduct = new UpdateProductService();
 
+    if (!name) throw new Error("Name is required!");
+    if (!description) throw new Error("Description is required!");
+
+    const priceProduct: number = !price ? 0 : price;
+    const amountProduct: number = !amount ? 0 : amount;
+
     const product = await updateProduct.execute({
-      id,
-      name,
-      price,
-      amount,
-      description
+      id: id,
+      name: name,
+      price: priceProduct,
+      amount: amountProduct,
+      description: description
     });
 
     return res.json(product);

@@ -10,10 +10,6 @@ interface OrderRequest {
 
 class UpdateProductService {
   async execute({ id, name, price, amount, description }: OrderRequest) {
-    if (!name || !price || !amount || !description) {
-      throw new Error("All fields is required!");
-    }
-
     const noDataFound = await prismaClient.product.findUnique({
       where: {
         id: id
